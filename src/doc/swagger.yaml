@@ -1,0 +1,48 @@
+openapi: 3.0.0
+info:
+  description: '<font size="2" color="red">MIT License</font>'
+  title: "Soap-To-Rest"
+  contact:
+    name: Erlan Lucio
+    url: https://github.com/lucioerlan
+  version: '1.0'
+servers:
+- url: https://soap-to-rest.herokuapp.com/api
+  variables: {}
+paths:
+  /consultZip:
+    post:
+      tags:
+      - ROUTES
+      summary: JSON TO XML
+      operationId: JSONTOXML
+      parameters: []
+      requestBody:
+        description: ''
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JSONTOXMLREQUEST'
+            example:
+              cep: '69914366'
+        required: true
+      responses:
+        '200':
+          description: ''
+          headers: {}
+      deprecated: false
+components:
+  schemas:
+    JSONTOXMLREQUEST:
+      title: JSONTOXMLREQUEST
+      required:
+      - cep
+      type: object
+      properties:
+        cep:
+          type: string
+      example:
+        cep: '69914366'
+tags:
+- name: ROUTES
+  description: ''

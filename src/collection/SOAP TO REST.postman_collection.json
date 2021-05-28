@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "63746570-1334-422a-a218-1c7f0acbac2a",
+		"name": "Soap-To-Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ROUTES",
+			"item": []
+		},
+		{
+			"name": "JSON TO XML",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cep\": \"69914366\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/consultZip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"consultZip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
